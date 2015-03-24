@@ -19,7 +19,7 @@ And have included some CSS to fulfill your destiny...
 .hoverable a:hover,
 a.hovertouch { color:red; }
 ```
-Additionally, the following [SCSS mixin](http://sass-lang.com/guide) mixin will cover your bases automatically.
+Additionally, the following [SCSS mixin](http://sass-lang.com/guide) will cover your bases automatically.
 ```
 @mixin hover($sel, $attr) {
   .hoverable $sel:hover,
