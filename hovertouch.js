@@ -35,6 +35,13 @@ var hovertouch = (function(){
         });
       }
 
+      // add elements to the default touchables
+      if( options.addElements ) {
+        touchables = touchables.concat(options.addElements.map(function(el) {
+          return el.toUpperCase();
+        }));
+      }
+
       // when a touch happens, let's hovertouch it!
       document.body.addEventListener( isWindows ? 'MSPointerDown' : 'touchstart', function(e){
         var source = e.target || e.srcElement;

@@ -10,14 +10,18 @@ After including hovertouch.js...
 ### Javascript
 You will run the initializer...
 ```
-<script>hovertouch.init();</script>
+<script>
+  hovertouch.init();
+</script>
 ```
 
 ### CSS
 And have included some CSS to fulfill your destiny...
 ```
-.hoverable a:hover,
-a.hovertouch { color:red; }
+<style>
+  .hoverable a:hover,
+  a.hovertouch { color:red; }
+</style>
 ```
 Additionally, the following [SCSS mixin](http://sass-lang.com/guide) will cover your bases automatically.
 ```
@@ -26,6 +30,21 @@ Additionally, the following [SCSS mixin](http://sass-lang.com/guide) will cover 
   $sel.hovertouch { $attr }
 }
 ```
+
+## Options
+Provide an options object to `.init(options)` with the following methods as desired:
+```
+hovertouch.init({
+  elements: ['TEXTAREA'],
+  addElements: ['SELECT']
+});
+```
+
+### elements
+This option will REPLACE the existing array of touchable elements with the provided array.
+
+### addElements
+This option will ADD the provided array of elements to the default array of touchable elements `['A', 'BUTTON', 'INPUT']`
 
 ## Dependencies
 This utility requires classList support. To fulfill this dependency on legacy browsers, you should have a polyfill loaded before hovertouch runs.
