@@ -47,5 +47,5 @@ This option will REPLACE the existing array of touchable elements with the provi
 This option will ADD the provided array of elements to the default array of touchable elements `['A', 'BUTTON', 'INPUT']`
 
 ## Dependencies
-This utility requires classList support. To fulfill this dependency on legacy browsers, you should have a polyfill loaded before hovertouch runs.
+This utility requires support for element.classList, array.map, and array.indexOf specified in ECMA5.1, which means IE 8 and below are not supported. To fulfill this dependency on legacy browsers (IE 8 and below), you should load appropriate polyfills before hovertouch runs.
 
