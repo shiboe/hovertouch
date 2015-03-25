@@ -66,7 +66,7 @@ This module requires support for element.classList, array.map, and array.indexOf
 As soon as I have time (apologies). I really like testing now, honest!
 
 #### Why does hovertouch rely on polyfills? 
-I'm trying a new approach with this, in that, if every widget/plugin/module rolls it's own polyfill, we are at best bloating our code.
+I want to let developers fill in their own gaps to their own need. Seems better than bloating this up with code you may have already implemented in a better way. I think this is also the way to drive things slowly towards *a brighter tomorrow*.
 
 #### Where's the minified version?
 We live in the future. As a resident of said future, it is your techno obligation to be compiling and minifying your scripts in an appropriate fashion. Providing a minified singleton should be considered *incentive towards that end*, not *me being lazy*. Both work however.
