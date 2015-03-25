@@ -1,34 +1,33 @@
 # hovertouch
-Corrects hover effects for touch devices when paired with CSS replacements
+Unifies :hover and touch events into a single style-able class
 
 ## Usage
-Include hovertouch.js on your page, and call `hovertouch.init()`. After that, any user touch will apply and remove a `.hovertouch` class to an associated anchor link, button, or input. Now you can duplicate your CSS hovers as .hovertouch to cover mobile! Some wonkiness can occur with leaving `:hover` on a touch device, so this utility will also add a `.hoverable` class to `document.body` for devices detected with a mouse. This allows you to safely prefix your CSS :hover to prevent it from firing on non-mouse devices.
+Include hovertouch.js on your page, and call `hovertouch.init()`. After that, any user touch or mouse over will add class: `.hovertouch` to an appropriate anchor link, button, or input. Use this instead of janky :hover to capture the imaginations of mobile users and desktop users alike, with your fancy pants active styles!
 
 ## Example
-After including hovertouch.js...
+hovertouch comes in two flavors: [module](https://github.com/ForbesLindesay/browserify-middleware) and global...
 
 ### Javascript
-You will run the initializer...
+You will run the initializer after requiring the module...
 ```
 <script>
+  var hovertouch = require('./hovertouch');
   hovertouch.init();
 </script>
 ```
 
+or if you want to go the global route...
+```
+<script src='/js/hovertouch.js'></script>
+hovertouch.init();
+```
+
 ### CSS
-And have included some CSS to fulfill your destiny...
+Then add some CSS to fulfill your destiny...
 ```
 <style>
-  .hoverable a:hover,
-  a.hovertouch { color:red; }
+  a.hovertouch { color:rainbow; }
 </style>
-```
-Additionally, the following [SCSS mixin](http://sass-lang.com/guide) will cover your bases automatically.
-```
-@mixin hover($sel, $attr) {
-  .hoverable $sel:hover,
-  $sel.hovertouch { $attr }
-}
 ```
 
 ## Options
@@ -47,5 +46,5 @@ This option will REPLACE the existing array of touchable elements with the provi
 This option will ADD the provided array of elements to the default array of touchable elements `['A', 'BUTTON', 'INPUT']`
 
 ## Dependencies
-This utility requires support for element.classList, array.map, and array.indexOf specified in ECMA5.1, which means IE 8 and below are not supported. To fulfill this dependency on legacy browsers (IE 8 and below), you should load appropriate polyfills before hovertouch runs.
+This utility requires support for element.classList, array.map, and array.indexOf specified in ECMA5.1, which means IE 9 and below are not supported, because IE. To fulfill this dependency on legacy browsers (IE 8 and below), you should load appropriate polyfills before hovertouch runs. I recommend [polyfill.io](https://cdn.polyfill.io/v1/docs/).
 
