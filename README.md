@@ -1,5 +1,5 @@
 # hovertouch
-Unify :hover and touch events into a single styleable class
+Unify :hover and touch events into a single styleable class to provide instant visual responsiveness to both touch and mouse driven devices uniformly.
 
 ## Usage
 Include hovertouch.js on your page, and call `hovertouch.init()`. After that, any user touch or mouseover will add class: `.hovertouch` to an appropriate anchor link, button, or input. Use this instead of janky :hover to capture the imaginations of mobile users and desktop users alike with your fancy pants active styles!
