@@ -1,0 +1,28 @@
+{
+  "name": "hovertouch",
+  "version": "0.1.3",
+  "description": "Unify :hover and touch events into a single styleable class to provide instant visual responsiveness to both touch and mouse driven devices uniformly",
+  "main": "hovertouch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiboe/hovertouch.git"
+  },
+  "keywords": [
+    "javascript",
+    "css",
+    "hover",
+    "touch",
+    "mobile",
+    "buttton",
+    "link"
+  ],
+  "author": "Stephen Cave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shiboe/hovertouch/issues"
+  },
+  "homepage": "https://github.com/shiboe/hovertouch"
+}

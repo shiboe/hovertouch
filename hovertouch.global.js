@@ -67,28 +67,22 @@ var hovertouch = (function(){
       document.body.addEventListener( isWindows ? 'MSPointerCancel' : 'touchcancel', unTouchAll );
 
 
-      function checkMouseOver(el) {
+      function mouseOver(el) {
         if( el.classList.contains(cls) ) {
           return true;
         }
-        else if( touchable(el) ) {
-          unTouchAll();
-          touch(el);
-          return true;
-        }
-        else if( el === document.body ) {
-          unTouchAll();
-          return false;
-        }
         else {
-          return checkMouseOver(el.parentNode);
+          el.classList.add(cls);
         }
       }
 
       // lets also cover our elements with mouse overs to replicate hover
       document.body.addEventListener('mouseover', function(e) {
         var source = e.target || e.srcElement;
-        checkMouseOver(source);
+        var touched = touchable(source);
+
+        if( touched ) mouseOver(touched);
+        else unTouchAll();
       });
 
       // and not forget to remove if the mouse exits the window directly
