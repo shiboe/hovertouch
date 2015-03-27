@@ -72,6 +72,7 @@ module.exports = (function(){
           return true;
         }
         else {
+          unTouchAll();
           el.classList.add(cls);
         }
       }
